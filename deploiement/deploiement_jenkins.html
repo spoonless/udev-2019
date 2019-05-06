@@ -5,13 +5,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta content="David Gayerie" name="author" />
-<meta content="Le protocole HTTP et les API Web" name="description" />
-<meta content="HTTP, API Web, Rest, Restful Web Service" name="keywords" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>HTTP, REST et les API Web &mdash; Documentation U&#39;Dev 2019 </title>
+  <title>Déploiement à partir de Jenkins &mdash; Documentation U&#39;Dev 2019 </title>
   
 
   
@@ -40,8 +37,8 @@
   <link rel="stylesheet" href="../_static/custom_rtd_theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Le protocole HTTP" href="http.html" />
-    <link rel="prev" title="JDBC dans une application Web" href="../javaee_web/jdbc_webapp.html" /> 
+    <link rel="next" title="Déploiement vers Heroku" href="deploiement_heroku.html" />
+    <link rel="prev" title="Déploiement à partir de Maven" href="deploiement_maven.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -195,99 +192,99 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">API Web et service Web</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">HTTP, REST et les API Web</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="http.html">Le protocole HTTP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http.html#structure-des-messages">Structure des messages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#exercice">Exercice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#les-codes-de-statut">Les codes de statut</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#les-methodes-http">Les méthodes HTTP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#proprietes-des-methodes-http">Propriétés des méthodes HTTP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#les-en-tetes-http">Les en-têtes HTTP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http.html#id1">Exercice</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../http/api_web.html">HTTP, REST et les API Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../http/http.html">Le protocole HTTP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#structure-des-messages">Structure des messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#exercice">Exercice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#les-codes-de-statut">Les codes de statut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#les-methodes-http">Les méthodes HTTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#proprietes-des-methodes-http">Propriétés des méthodes HTTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#les-en-tetes-http">Les en-têtes HTTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http.html#id1">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="http_cas_utilisation.html">HTTP : les cas d’utilisation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#obtenir-la-representation-d-une-ressource">Obtenir la représentation d’une ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#obtenir-uniquement-les-meta-informations-d-une-ressource">Obtenir uniquement les meta-informations d’une ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#creer-une-ressource-dont-on-connait-l-uri">Créer une ressource dont on connait l’URI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#creer-une-ressource-dont-on-ne-connait-pas-l-uri">Créer une ressource dont on ne connait pas l’URI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#supprimer-l-acces-a-une-ressource">Supprimer l’accès à une ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#mettre-a-jour-une-ressource">Mettre à jour une ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#mettre-a-jour-partiellement-une-ressource">Mettre à jour partiellement une ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#executer-un-processus-de-traitement">Exécuter un processus de traitement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#connaitre-les-methodes-autorisees">Connaître les méthodes autorisées</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#traitement-asynchrone-d-une-requete">Traitement asynchrone d’une requête</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#les-redirections">Les redirections</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="http_cas_utilisation.html#evolution-du-service">Évolution du service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="http_cas_utilisation.html#uri-volatile-et-canonicalisation-d-uri">URI volatile et canonicalisation d’URI</a></li>
-<li class="toctree-l4"><a class="reference internal" href="http_cas_utilisation.html#separer-le-traitement-de-la-requete-de-son-resultat">Séparer le traitement de la requête de son résultat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/http_cas_utilisation.html">HTTP : les cas d’utilisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#obtenir-la-representation-d-une-ressource">Obtenir la représentation d’une ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#obtenir-uniquement-les-meta-informations-d-une-ressource">Obtenir uniquement les meta-informations d’une ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#creer-une-ressource-dont-on-connait-l-uri">Créer une ressource dont on connait l’URI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#creer-une-ressource-dont-on-ne-connait-pas-l-uri">Créer une ressource dont on ne connait pas l’URI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#supprimer-l-acces-a-une-ressource">Supprimer l’accès à une ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#mettre-a-jour-une-ressource">Mettre à jour une ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#mettre-a-jour-partiellement-une-ressource">Mettre à jour partiellement une ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#executer-un-processus-de-traitement">Exécuter un processus de traitement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#connaitre-les-methodes-autorisees">Connaître les méthodes autorisées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#traitement-asynchrone-d-une-requete">Traitement asynchrone d’une requête</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#les-redirections">Les redirections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../http/http_cas_utilisation.html#evolution-du-service">Évolution du service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/http_cas_utilisation.html#uri-volatile-et-canonicalisation-d-uri">URI volatile et canonicalisation d’URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/http_cas_utilisation.html#separer-le-traitement-de-la-requete-de-son-resultat">Séparer le traitement de la requête de son résultat</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="http_cas_utilisation.html#exercice">Exercice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_cas_utilisation.html#exercice">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="http_negociation_contenu.html">HTTP : la négociation de contenu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http_negociation_contenu.html#la-negociation-de-type-de-contenu">La négociation de type de contenu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_negociation_contenu.html#la-negociation-de-jeu-de-caracteres">La négociation de jeu de caractères</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_negociation_contenu.html#la-negociation-de-langue">La négociation de langue</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_negociation_contenu.html#l-en-tete-vary">L’en-tête Vary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_negociation_contenu.html#exercice">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/http_negociation_contenu.html">HTTP : la négociation de contenu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_negociation_contenu.html#la-negociation-de-type-de-contenu">La négociation de type de contenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_negociation_contenu.html#la-negociation-de-jeu-de-caracteres">La négociation de jeu de caractères</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_negociation_contenu.html#la-negociation-de-langue">La négociation de langue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_negociation_contenu.html#l-en-tete-vary">L’en-tête Vary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_negociation_contenu.html#exercice">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="http_requetes_conditionnelles.html">HTTP : les requêtes conditionnelles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http_requetes_conditionnelles.html#demander-une-representation-a-jour">Demander une représentation à jour</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_requetes_conditionnelles.html#creer-une-ressource-si-elle-n-existe-pas-deja">Créer une ressource si elle n’existe pas déjà</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_requetes_conditionnelles.html#alterer-une-ressource-sous-condition">Altérer une ressource sous condition</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_requetes_conditionnelles.html#alterer-une-ressource-si-elle-existe">Altérer une ressource si elle existe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_requetes_conditionnelles.html#exercice">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/http_requetes_conditionnelles.html">HTTP : les requêtes conditionnelles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_requetes_conditionnelles.html#demander-une-representation-a-jour">Demander une représentation à jour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_requetes_conditionnelles.html#creer-une-ressource-si-elle-n-existe-pas-deja">Créer une ressource si elle n’existe pas déjà</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_requetes_conditionnelles.html#alterer-une-ressource-sous-condition">Altérer une ressource sous condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_requetes_conditionnelles.html#alterer-une-ressource-si-elle-existe">Altérer une ressource si elle existe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_requetes_conditionnelles.html#exercice">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="http_gestion_cache.html">HTTP : la gestion du cache</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#serveur-d-origine-et-intermediaires">Serveur d’origine et intermédiaires</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#principe-generale-de-la-gestion-du-cache">Principe générale de la gestion du cache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#la-fraicheur-d-une-reponse">La fraîcheur d’une réponse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#la-revalidation">La revalidation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#les-directives-de-strategie-de-cache">Les directives de stratégie de cache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#l-invalidation-de-cache">L’invalidation de cache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_gestion_cache.html#enrichissement-des-en-tetes-par-les-intermediaires">Enrichissement des en-têtes par les intermédiaires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/http_gestion_cache.html">HTTP : la gestion du cache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#serveur-d-origine-et-intermediaires">Serveur d’origine et intermédiaires</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#principe-generale-de-la-gestion-du-cache">Principe générale de la gestion du cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#la-fraicheur-d-une-reponse">La fraîcheur d’une réponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#la-revalidation">La revalidation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#les-directives-de-strategie-de-cache">Les directives de stratégie de cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#l-invalidation-de-cache">L’invalidation de cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_gestion_cache.html#enrichissement-des-en-tetes-par-les-intermediaires">Enrichissement des en-têtes par les intermédiaires</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="http_liens.html">HTTP : les liens</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="http_liens.html#l-en-tete-link">L’en-tête Link</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_liens.html#les-types-de-relation">Les types de relation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="http_liens.html#les-attributs-optionnels-d-un-lien">Les attributs optionnels d’un lien</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/http_liens.html">HTTP : les liens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_liens.html#l-en-tete-link">L’en-tête Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_liens.html#les-types-de-relation">Les types de relation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/http_liens.html#les-attributs-optionnels-d-un-lien">Les attributs optionnels d’un lien</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="rest.html">REST</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#la-ressource">La ressource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#uri-informative-ou-uri-opaque">URI informative ou URI opaque ?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#ressource-contre-rpc">Ressource contre RPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#la-representation">La représentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#les-contraintes-rest">Les contraintes REST</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#client-serveur">Client/Serveur</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#interface-uniforme">Interface uniforme</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#sans-etat-stateless">Sans état (stateless)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#mise-en-cache-caching">Mise en cache (caching)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#layered-system">Layered system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#code-on-demand">Code on demand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../http/rest.html">REST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#la-ressource">La ressource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#uri-informative-ou-uri-opaque">URI informative ou URI opaque ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#ressource-contre-rpc">Ressource contre RPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#la-representation">La représentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#les-contraintes-rest">Les contraintes REST</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#client-serveur">Client/Serveur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#interface-uniforme">Interface uniforme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#sans-etat-stateless">Sans état (stateless)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#mise-en-cache-caching">Mise en cache (caching)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#layered-system">Layered system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#code-on-demand">Code on demand</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#hypermedia">Hypermédia</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#les-formats-hypermedias">Les formats hypermédias</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#l-en-tete-link">L’en-tête Link</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#les-apports-de-l-hypermedia">Les apports de l’hypermédia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#hypermedia">Hypermédia</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#les-formats-hypermedias">Les formats hypermédias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#l-en-tete-link">L’en-tête Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#les-apports-de-l-hypermedia">Les apports de l’hypermédia</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#rest-ca-veut-dire-quoi">REST : ça veut dire quoi ?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#les-api-web">Les API Web</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#references">Références</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#sites-web-articles">Sites Web &amp; articles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#livres">Livres</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rest.html#applications-de-demo">Applications de démo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#rest-ca-veut-dire-quoi">REST : ça veut dire quoi ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#les-api-web">Les API Web</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#references">Références</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#sites-web-articles">Sites Web &amp; articles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#livres">Livres</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../http/rest.html#applications-de-demo">Applications de démo</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="rest.html#exercices">Exercices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../http/rest.html#exercices">Exercices</a></li>
 </ul>
 </li>
 </ul>
@@ -315,28 +312,28 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Déploiement d'application</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../deploiement/deploiement_maven.html">Déploiement à partir de Maven</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#utilisation-de-maven-en-ligne-de-commandes">Utilisation de Maven en ligne de commandes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#exercice">Exercice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#gestion-des-plugins-dans-maven">Gestion des plugins dans Maven</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#association-d-un-plugin-a-une-phase-d-execution">Association d’un plugin à une phase d’exécution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#deploiement-automatise-dans-tomcat">Déploiement automatisé dans Tomcat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#id1">Exercice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#export-des-identifiants-du-serveur">Export des identifiants du serveur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_maven.html#id2">Exercice</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="deploiement_maven.html">Déploiement à partir de Maven</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#utilisation-de-maven-en-ligne-de-commandes">Utilisation de Maven en ligne de commandes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#exercice">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#gestion-des-plugins-dans-maven">Gestion des plugins dans Maven</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#association-d-un-plugin-a-une-phase-d-execution">Association d’un plugin à une phase d’exécution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#deploiement-automatise-dans-tomcat">Déploiement automatisé dans Tomcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#id1">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#export-des-identifiants-du-serveur">Export des identifiants du serveur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#id2">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../deploiement/deploiement_jenkins.html">Déploiement à partir de Jenkins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_jenkins.html#installation-de-jenkins">Installation de Jenkins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_jenkins.html#exercices">Exercices</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Déploiement à partir de Jenkins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-de-jenkins">Installation de Jenkins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercices">Exercices</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../deploiement/deploiement_heroku.html">Déploiement vers Heroku</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_heroku.html#installation-de-heroku-cli">Installation de heroku-CLI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_heroku.html#creation-d-une-application-heroku">Création d’une application Heroku</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_heroku.html#deploiement-d-une-application">Déploiement d’une application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_heroku.html#associer-a-un-depot-git-existant">Associer à un dépôt Git existant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploiement_heroku.html">Déploiement vers Heroku</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_heroku.html#installation-de-heroku-cli">Installation de heroku-CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_heroku.html#creation-d-une-application-heroku">Création d’une application Heroku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_heroku.html#deploiement-d-une-application">Déploiement d’une application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_heroku.html#associer-a-un-depot-git-existant">Associer à un dépôt Git existant</a></li>
 </ul>
 </li>
 </ul>
@@ -386,7 +383,7 @@
     
       <li><a href="../index.html">Accueil</a> &raquo;</li>
         
-      <li>HTTP, REST et les API Web</li>
+      <li>Déploiement à partir de Jenkins</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -400,10 +397,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="http.html" class="btn btn-neutral float-right" title="Le protocole HTTP" accesskey="n">Suivant <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="deploiement_heroku.html" class="btn btn-neutral float-right" title="Déploiement vers Heroku" accesskey="n">Suivant <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../javaee_web/jdbc_webapp.html" class="btn btn-neutral" title="JDBC dans une application Web" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
+        <a href="deploiement_maven.html" class="btn btn-neutral" title="Déploiement à partir de Maven" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
       
   </div>
   
@@ -412,18 +409,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="http-rest-et-les-api-web">
-<h1>HTTP, REST et les API Web<a class="headerlink" href="#http-rest-et-les-api-web" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="http.html">Le protocole HTTP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http_cas_utilisation.html">HTTP : les cas d’utilisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http_negociation_contenu.html">HTTP : la négociation de contenu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http_requetes_conditionnelles.html">HTTP : les requêtes conditionnelles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http_gestion_cache.html">HTTP : la gestion du cache</a></li>
-<li class="toctree-l1"><a class="reference internal" href="http_liens.html">HTTP : les liens</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rest.html">REST</a></li>
+  <div class="section" id="deploiement-a-partir-de-jenkins">
+<h1>Déploiement à partir de Jenkins<a class="headerlink" href="#deploiement-a-partir-de-jenkins" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est un serveur d’intégration continue. Il permet d’automatiser un
+certain nombre d’opérations (compilation, packaging, tests) afin de les réaliser
+aussi souvent que nécessaire. Une équipe de développement peut ainsi créer un
+pipeline automatisé de développement lui permettant de vérifier la qualité de ce
+qui est produit au fur et à mesure des développements.</p>
+<div class="section" id="installation-de-jenkins">
+<h2>Installation de Jenkins<a class="headerlink" href="#installation-de-jenkins" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour Windows, <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est disponible sous la forme d’un exécutable qui s’installe comme un service.
+Mais <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est en fait une application Web Java. Il est donc aussi téléchargeable
+sous la forme d’un fichier WAR qui peut être déployé dans un serveur Web Java.</p>
+<p>Pour simplifier l’exécution, les développeurs ont intégré un mini serveur Web
+à l’intérieur du fichier WAR. De manière exceptionnelle, l’application Web est
+donc directement exécutable. Pour cela, il faut se rendre en ligne de commandes
+dans le répertoire contenant le fichier <code class="file docutils literal notranslate"><span class="pre">jenkins.war</span></code> et taper la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>java -jar jenkins.war
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercices">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="exercice admonition">
+<p class="admonition-title">Démarrer Jenkins</p>
+<p>Téléchargez Jenkins sous la forme d’un fichier WAR à l’adresse</p>
+<p><a class="reference external" href="http://mirrors.jenkins.io/war-stable/latest/jenkins.war">http://mirrors.jenkins.io/war-stable/latest/jenkins.war</a></p>
+<p>Attention si vous avez déjà un serveur Web utilisant le port 8080, vous
+devez préciser un nouveau port pour <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> lors de son lancement :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ java -jar jenkins.war --httpPort<span class="o">=</span><span class="m">9090</span>
+</pre></div>
+</div>
+<p>Vous pouvez ensuite vous connecter à <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> à l’adresse :</p>
+<blockquote>
+<div><p><a class="reference external" href="http://localhost:9090">http://localhost:9090</a></p>
+</div></blockquote>
+<p>Pour finaliser l’installation, il vous faudra :</p>
+<ul class="simple">
+<li><p>Valider votre installation en fournissant la clé d’administration</p></li>
+<li><p>Finir l’installation en faisant télécharger les plugins recommandés</p></li>
+<li><p>Créer un compte administrateur (le mail demandé n’a pas besoin d’être valide
+pour une installation de test).</p></li>
 </ul>
+</div>
+<p>La plupart du temps, les sources d’un projet sont mises à disposition du serveur
+d’intégration continue grâce à un système de gestion de source (SCM : <em>source
+control management</em>) tel que Git.</p>
+<div class="exercice admonition">
+<p class="admonition-title">Configurer un job Jenkins</p>
+<p>Configurez un job Jenkins pour récupérer un projet depuis un dépôt Git
+distant, générer le package WAR du projet et déployer automatiquement
+cette archive Web Java dans Tomcat.</p>
+</div>
 </div>
 </div>
 
@@ -435,10 +472,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="http.html" class="btn btn-neutral float-right" title="Le protocole HTTP" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="deploiement_heroku.html" class="btn btn-neutral float-right" title="Déploiement vers Heroku" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../javaee_web/jdbc_webapp.html" class="btn btn-neutral float-left" title="JDBC dans une application Web" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
+        <a href="deploiement_maven.html" class="btn btn-neutral float-left" title="Déploiement à partir de Maven" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
       
     </div>
   
