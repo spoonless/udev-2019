@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Déploiement à partir de Jenkins &mdash; Documentation U&#39;Dev 2019 </title>
+  <title>Déploiement avec Docker &mdash; Documentation U&#39;Dev 2019 </title>
   
 
   
@@ -37,8 +37,7 @@
   <link rel="stylesheet" href="../_static/custom_rtd_theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Déploiement vers Heroku" href="deploiement_heroku.html" />
-    <link rel="prev" title="Déploiement à partir de Maven" href="deploiement_maven.html" /> 
+    <link rel="prev" title="Déploiement vers Heroku" href="deploiement_heroku.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -324,9 +323,9 @@
 <li class="toctree-l2"><a class="reference internal" href="deploiement_maven.html#id2">Exercice</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Déploiement à partir de Jenkins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation-de-jenkins">Installation de Jenkins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exercices">Exercices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploiement_jenkins.html">Déploiement à partir de Jenkins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_jenkins.html#installation-de-jenkins">Installation de Jenkins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploiement_jenkins.html#exercices">Exercices</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="deploiement_heroku.html">Déploiement vers Heroku</a><ul>
@@ -336,26 +335,26 @@
 <li class="toctree-l2"><a class="reference internal" href="deploiement_heroku.html#associer-a-un-depot-git-existant">Associer à un dépôt Git existant</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deploiement_docker.html">Déploiement avec Docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#principe-de-docker">Principe de Docker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#installation-de-docker">Installation de Docker</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#linux">Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#macos">MacOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#windows-10-professionnel">Windows 10 Professionnel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#autres-versions-de-windows-ou-macos">Autres versions de Windows ou MacOS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Déploiement avec Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#principe-de-docker">Principe de Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-de-docker">Installation de Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">MacOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows-10-professionnel">Windows 10 Professionnel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autres-versions-de-windows-ou-macos">Autres versions de Windows ou MacOS</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#prise-en-main-de-docker">Prise en main de Docker</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#creer-et-lancer-un-conteneur">Créer et lancer un conteneur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#gerer-les-images">Gérer les images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deploiement_docker.html#gerer-les-conteneurs">Gérer les conteneurs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prise-en-main-de-docker">Prise en main de Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creer-et-lancer-un-conteneur">Créer et lancer un conteneur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gerer-les-images">Gérer les images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gerer-les-conteneurs">Gérer les conteneurs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#lancer-un-serveur-tomcat-depuis-docker">Lancer un serveur Tomcat depuis Docker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#exercice">Exercice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#creer-une-image">Créer une image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#id1">Exercice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploiement_docker.html#deploiement-d-une-image-sur-docker-hub">Déploiement d’une image sur Docker Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lancer-un-serveur-tomcat-depuis-docker">Lancer un serveur Tomcat depuis Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercice">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creer-une-image">Créer une image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Exercice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploiement-d-une-image-sur-docker-hub">Déploiement d’une image sur Docker Hub</a></li>
 </ul>
 </li>
 </ul>
@@ -405,7 +404,7 @@
     
       <li><a href="../index.html">Accueil</a> &raquo;</li>
         
-      <li>Déploiement à partir de Jenkins</li>
+      <li>Déploiement avec Docker</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -419,10 +418,8 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="deploiement_heroku.html" class="btn btn-neutral float-right" title="Déploiement vers Heroku" accesskey="n">Suivant <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="deploiement_maven.html" class="btn btn-neutral" title="Déploiement à partir de Maven" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
+        <a href="deploiement_heroku.html" class="btn btn-neutral" title="Déploiement vers Heroku" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
       
   </div>
   
@@ -431,57 +428,365 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="deploiement-a-partir-de-jenkins">
-<h1>Déploiement à partir de Jenkins<a class="headerlink" href="#deploiement-a-partir-de-jenkins" title="Lien permanent vers ce titre">¶</a></h1>
-<p><a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est un serveur d’intégration continue. Il permet d’automatiser un
-certain nombre d’opérations (compilation, packaging, tests) afin de les réaliser
-aussi souvent que nécessaire. Une équipe de développement peut ainsi créer un
-pipeline automatisé de développement lui permettant de vérifier la qualité de ce
-qui est produit au fur et à mesure des développements.</p>
-<div class="section" id="installation-de-jenkins">
-<h2>Installation de Jenkins<a class="headerlink" href="#installation-de-jenkins" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour Windows, <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est disponible sous la forme d’un exécutable qui s’installe comme un service.
-Mais <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> est en fait une application Web Java. Il est donc aussi téléchargeable
-sous la forme d’un fichier WAR qui peut être déployé dans un serveur Web Java.</p>
-<p>Pour simplifier l’exécution, les développeurs ont intégré un mini serveur Web
-à l’intérieur du fichier WAR. De manière exceptionnelle, l’application Web est
-donc directement exécutable. Pour cela, il faut se rendre en ligne de commandes
-dans le répertoire contenant le fichier <code class="file docutils literal notranslate"><span class="pre">jenkins.war</span></code> et taper la commande :</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>java -jar jenkins.war
+  <div class="section" id="deploiement-avec-docker">
+<h1>Déploiement avec Docker<a class="headerlink" href="#deploiement-avec-docker" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://docker.com">Docker</a> est une solution de virtualisation applicative. Le principe de <a class="reference external" href="https://docker.com">Docker</a>
+est de permettre de créer un conteneur pour une application ainsi que pour toutes ses
+dépendances. Par exemple un conteneur d’une application Web Java contiendra, non
+seulement l’application Web, mais également le serveur et toutes ses dépendances
+pour pouvoir être exécuté. Ainsi une solution applicative est composée d’une myriade
+de conteneurs (un pour chaque composant) : serveurs Web, serveurs de base de données…</p>
+<p>Contrairement à la virtualisation, <a class="reference external" href="https://docker.com">Docker</a> ne simule pas une infrastructure physique
+mais uniquement l’environnement logiciel minimal. Ainsi, un conteneur <a class="reference external" href="https://docker.com">Docker</a>
+est plus léger que l’image d’une machine virtuelle. Cette solution offre beaucoup
+plus de souplesse d’utilisation qu’une virtualisation de machine tout en offrant
+les mêmes avantages.</p>
+<p><a class="reference external" href="https://docker.com">Docker</a> fait partie des outils couramment utilisés dans une approche <a class="reference external" href="https://fr.wikipedia.org/wiki/Devops">DevOps</a>. En
+effet, il facilite grandement une intégration des problématiques de développement
+logiciel et de maintenance des infrastructures. Une équipe de développement est
+en mesure de produire un conteneur <a class="reference external" href="https://docker.com">Docker</a> autonome et plus facilement déployable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Techniquement, <a class="reference external" href="https://docker.com">Docker</a> utilise la fonctionnalité <a class="reference external" href="https://fr.wikipedia.org/wiki/Cgroups">cgroups</a> du noyau Linux qui
+permet d’isoler et de limiter l’utilisation des ressources d’un processus.
+<a class="reference external" href="https://docker.com">Docker</a> est donc une technologie Linux. Pour l’utiliser sur d’autres systèmes
+d’exploitation, il faut passer par une solution de virtualisation de machine.
+Les distributions professionnelles de Microsoft Windows intègrent un serveur
+de virtualisation nommé Hyper-V qui permet de lancer un système Linux pour
+accueillir les conteneurs.</p>
+</div>
+<div class="section" id="principe-de-docker">
+<h2>Principe de Docker<a class="headerlink" href="#principe-de-docker" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://docker.com">Docker</a> représente une application sous la forme d’une image. De très nombreuses
+images sont disponibles en ligne et peuvent être téléchargées directement. Une
+image contient une application et toutes ses dépendances. Elle peut donc être
+directement exécutée par <a class="reference external" href="https://docker.com">Docker</a>. Une image est identifiée par son dépôt d’origine
+(<em>repository</em>) et un <em>tag</em> (généralement la version de l’image). Exécuter une
+image crée une <strong>conteneur</strong>. Il est possible de lancer autant de conteneurs que
+l’on souhaite à partir d’une image si l’on veut exécuter simultanément la même
+application.</p>
+<p>Ainsi, avec <a class="reference external" href="https://docker.com">Docker</a>, mettre à jour une application consiste à télécharger (<em>pull</em>)
+une nouvelle image, arrêter l’ancien conteneur et démarrer un conteneur à
+partir de la dernière image. On voit ainsi que les procédures de mise à jour
+sont considérablement simplifiées et sont facilement testables et maîtrisables.</p>
+</div>
+<div class="section" id="installation-de-docker">
+<h2>Installation de Docker<a class="headerlink" href="#installation-de-docker" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour que <a class="reference external" href="https://docker.com">Docker</a> fonctionne, il faut que le processeur de la machine supporte
+la virtualisation et que cette fonctionnalité soit activée.</p>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour Linux, <a class="reference external" href="https://docker.com">Docker</a> est disponible dans le gestionnaire de paquets des distributions.
+Pour une distribution type Debian, vous pouvez par exemple l’installer avec :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ sudo apt install docker
 </pre></div>
 </div>
 </div>
-<div class="section" id="exercices">
-<h2>Exercices<a class="headerlink" href="#exercices" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="exercice admonition">
-<p class="admonition-title">Démarrer Jenkins</p>
-<p>Téléchargez Jenkins sous la forme d’un fichier WAR à l’adresse</p>
-<p><a class="reference external" href="http://mirrors.jenkins.io/war-stable/latest/jenkins.war">http://mirrors.jenkins.io/war-stable/latest/jenkins.war</a></p>
-<p>Attention si vous avez déjà un serveur Web utilisant le port 8080, vous
-devez préciser un nouveau port pour <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> lors de son lancement :</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ java -jar jenkins.war --httpPort<span class="o">=</span><span class="m">9090</span>
-</pre></div>
-</div>
-<p>Vous pouvez ensuite vous connecter à <a class="reference external" href="https://jenkins.io/index.html">Jenkins</a> à l’adresse :</p>
+<div class="section" id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour MacOS, vous pouvez télécharger <em>Docker Desktop</em> à cette adresse :</p>
 <blockquote>
-<div><p><a class="reference external" href="http://localhost:9090">http://localhost:9090</a></p>
+<div><p><a class="reference external" href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/">https://hub.docker.com/editions/community/docker-ce-desktop-mac/</a></p>
 </div></blockquote>
-<p>Pour finaliser l’installation, il vous faudra :</p>
-<ul class="simple">
-<li><p>Valider votre installation en fournissant la clé d’administration</p></li>
-<li><p>Finir l’installation en faisant télécharger les plugins recommandés</p></li>
-<li><p>Créer un compte administrateur (le mail demandé n’a pas besoin d’être valide
-pour une installation de test).</p></li>
-</ul>
+<p>Comme pour la plupart des applications, en double cliquant sur l’icône du fichier,
+vous pourrez déplacer <a class="reference external" href="https://docker.com">Docker</a> dans le répertoire des applications pour l’installer.</p>
 </div>
-<p>La plupart du temps, les sources d’un projet sont mises à disposition du serveur
-d’intégration continue grâce à un système de gestion de source (SCM : <em>source
-control management</em>) tel que Git.</p>
+<div class="section" id="windows-10-professionnel">
+<h3>Windows 10 Professionnel<a class="headerlink" href="#windows-10-professionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour Windows 10 Professionnel ou Windows Server, vous pouvez télécharger <em>Docker
+Desktop</em> à cette adresse :</p>
+<blockquote>
+<div><p><a class="reference external" href="https://hub.docker.com/editions/community/docker-ce-desktop-windows/">https://hub.docker.com/editions/community/docker-ce-desktop-windows/</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="autres-versions-de-windows-ou-macos">
+<h3>Autres versions de Windows ou MacOS<a class="headerlink" href="#autres-versions-de-windows-ou-macos" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous ne disposez pas de Windows 10 Professionnel (ou Windows Server), le système
+ne dispose pas de Hyper-V et il n’est pas possible d’installer directement <a class="reference external" href="https://docker.com">Docker</a>.
+Pour les versions de MacOS antérieures à 10.10.3, vous ne pouvez pas non plus
+installer <em>Docker Desktop</em>.</p>
+<p>Cependant, vous pouvez télécharger <em>Docker Toolbox</em> à cette adresse :</p>
+<blockquote>
+<div><p><a class="reference external" href="https://docs.docker.com/toolbox/overview/">https://docs.docker.com/toolbox/overview/</a></p>
+</div></blockquote>
+<p><em>Docker Toolbox</em> inclut une installation de VirtualBox qui va également installer
+une machine virtuelle Linux et un serveur <a class="reference external" href="https://docker.com">Docker</a> dans cette machine.</p>
+<div class="admonition caution">
+<p class="admonition-title">Prudence</p>
+<p>Si VirtualBox est déjà installé sur le système, il faut l’arrêter avant
+de lancer l’installation de <em>Docker Toolbox</em>.</p>
+</div>
+<p>Une fois installé, lancer <em>Docker Quickstart</em> pour installer la machine virtuelle
+Linux.</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Une fois que <a class="reference external" href="https://docker.com">Docker</a> n’est plus nécessaire, vous pouvez arrêter la machine
+virtuelle avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker-machine stop
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prise-en-main-de-docker">
+<h2>Prise en main de Docker<a class="headerlink" href="#prise-en-main-de-docker" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ouvrez un terminal et tapez la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker version
+</pre></div>
+</div>
+<div class="section" id="creer-et-lancer-un-conteneur">
+<h3>Créer et lancer un conteneur<a class="headerlink" href="#creer-et-lancer-un-conteneur" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour créer et lancer un conteneur, on utilise la commande <code class="docutils literal notranslate"><span class="pre">container</span> <span class="pre">run</span></code> suivi
+des options et du nom de l’image à partir de laquelle on souhaite créer le conteneur.
+Essayez la commande</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name bonjour hello-world
+</pre></div>
+</div>
+<p>La commande ci-dessus crée et lance un nouveau conteneur appelé <code class="docutils literal notranslate"><span class="pre">bonjour</span></code> à
+partir de l’image <code class="docutils literal notranslate"><span class="pre">hello-world</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Si vous ne fournissez pas de nom au conteneur, <a class="reference external" href="https://docker.com">Docker</a> en génère un automatiquement.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Par défaut, <a class="reference external" href="https://docker.com">Docker</a> va chercher l’image avec le <em>tag</em> <em>latest</em>. Le <em>tag</em> est
+utilisé le plus souvent pour spécifier la version. Si vous voulez préciser
+une version d’un conteneur, il suffit de la préciser après le nom de l’image
+en les séparant par <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name monalpine alpine:3.6.5
+</pre></div>
+</div>
+</div>
+<p>La première fois que vous lancez cette commande, <a class="reference external" href="https://docker.com">Docker</a> cherche localement l’image
+<code class="docutils literal notranslate"><span class="pre">hello-world</span></code>. Comme elle n’est pas disponible, il va d’abord télécharger l’image
+sur le réseau. Puis crée le conteneur et le lance. Cette application se contente
+d’afficher <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">from</span> <span class="pre">Docker!</span></code> ainsi que des informations additionnelles.</p>
+</div>
+<div class="section" id="gerer-les-images">
+<h3>Gérer les images<a class="headerlink" href="#gerer-les-images" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez lister les images disponibles localement avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image ls
+</pre></div>
+</div>
+<p>Vous pouvez chercher une image disponible en ligne avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker search <span class="o">[</span>NOM<span class="o">]</span>
+</pre></div>
+</div>
+<p>Vous pouvez supprimer une image localement avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image rm <span class="o">[</span>REPOSITORY<span class="o">]</span>:<span class="o">[</span>TAG<span class="o">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vous ne pouvez pas supprimer une image s’il existe un ou plusieurs conteneurs
+créés à partir de cette image. Vous pouvez néanmoins forcer la suppression
+avec l’option <code class="docutils literal notranslate"><span class="pre">-f</span></code> :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image rm -f <span class="o">[</span>REPOSITORY<span class="o">]</span>:<span class="o">[</span>TAG<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<p>Pour supprimer toutes les images qui ne sont plus utilisées par un conteneur :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image prune
+</pre></div>
+</div>
+</div>
+<div class="section" id="gerer-les-conteneurs">
+<h3>Gérer les conteneurs<a class="headerlink" href="#gerer-les-conteneurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez lister les conteneurs en cours d’exécution avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container ps
+</pre></div>
+</div>
+<p>Pour lister tous les conteneurs quel que soit leur état, utilisez l’option <code class="docutils literal notranslate"><span class="pre">-a</span></code> :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container ps -a
+</pre></div>
+</div>
+<p>Pour relancer un conteneur existant :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container start <span class="o">[</span>NOM<span class="o">]</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Astuce</p>
+<p>Un conteneur a également un identifiant unique généré par <a class="reference external" href="https://docker.com">Docker</a>. Vous pouvez
+connaître l’identifiant d’un conteneur lorsque vous les listez. Pour toutes
+les commandes qui attendent le nom d’un container, vous pouvez à la place
+indiquer son identifiant.</p>
+</div>
+<p>Par défaut, un conteneur est démarré en mode <em>detached</em>. Cela signifie
+que l’entrée standard (STDIN) et les sorties (STDOUT / STDERR) ne sont pas attachées
+au terminal. Si le conteneur contient une application serveur, c’est généralement
+le comportement attendu. Sinon il faut utiliser le paramètre <code class="docutils literal notranslate"><span class="pre">-a</span></code> pour attacher
+les sorties et <code class="docutils literal notranslate"><span class="pre">-i</span></code> pour attacher les entrées :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run -ai bonjour
+</pre></div>
+</div>
+<p>Pour arrêter un conteneur :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container stop <span class="o">[</span>NOM<span class="o">]</span>
+</pre></div>
+</div>
+<p>Pour supprimer un conteneur :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container rm <span class="o">[</span>NOM<span class="o">]</span>
+</pre></div>
+</div>
+<p>Par défaut une image définit un point d’entrée, c’est-à-dire une commande à exécuter
+au lancement d’un conteneur. Pour une image d’un serveur Web, il s’agit de la commande
+qui lance le serveur. Mais il est également possible de passer la commande à exécuter
+lors de l’appel à la commande <code class="docutils literal notranslate"><span class="pre">run</span></code>.</p>
+<p>Par exemple, si nous voulons démarrer une invite de commande dans une image d’un système
+Linux Alpine, nous pouvons créer un conteneur de la manière suivante :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name monlinux -ti alpine /bin/sh
+</pre></div>
+</div>
+<p>L’option <code class="docutils literal notranslate"><span class="pre">-i</span></code> indique que l’on veut démarrer le conteneur en mode interactif
+et donc attacher l’entrée standard du conteneur à l’invite de commandes. L’option
+<code class="docutils literal notranslate"><span class="pre">-t</span></code> indique que le veut allouer un pseudo terminal pour recevoir un affichage.
+Ce conteneur est défini avec comme point d’entrée <code class="docutils literal notranslate"><span class="pre">/bin/sh</span></code> qui est le programme
+<em>shell</em> sur une distribution Linux Alpine. Donc, le conteneur va continuer à
+s’exécuter jusqu’à ce que nous fermions le terminal grâce, par exemple, à la commande
+<code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p>
+<p>Pour supprimer tous les conteneurs qui ne sont plus en cours d’exécution :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container prune
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="lancer-un-serveur-tomcat-depuis-docker">
+<h2>Lancer un serveur Tomcat depuis Docker<a class="headerlink" href="#lancer-un-serveur-tomcat-depuis-docker" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://docker.com">Docker</a> fournit une image nommée <code class="docutils literal notranslate"><span class="pre">tomcat</span></code> du serveur Java Apache Tomcat. Le
+serveur écoute sur le port 8080 du conteneur. Pour pouvoir accéder au serveur,
+il faut associer ce port à un port de la machine hôte grâce à l’option <code class="docutils literal notranslate"><span class="pre">-p</span></code> en
+utilisant la syntaxe suivante :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>-p <span class="o">[</span>PORT HOTE<span class="o">]</span>:<span class="o">[</span>PORT CONTENEUR<span class="o">]</span>
+</pre></div>
+</div>
+<p>Si on veut que le serveur s’exécute indépendamment du terminal, il faut également
+le détacher grâce à l’option <code class="docutils literal notranslate"><span class="pre">-d</span></code> :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name tomlechat -d -p <span class="m">8080</span>:8080 tomcat:9.0.19-jre8-alpine
+</pre></div>
+</div>
+<p>Un fois le conteneur lancé, il sera accessible à l’adresse IP de la machine hôte
+sur le port 8080.</p>
+</div>
+<div class="section" id="exercice">
+<h2>Exercice<a class="headerlink" href="#exercice" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-deployer-une-application-web-java-dans-un-conteneur admonition">
+<p class="admonition-title">Déployer une application Web Java dans un conteneur</p>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">cp</span></code> permet de copier un fichier local dans un conteneur
+(ou l’inverse).</p>
+<p>Générez un fichier WAR et copiez ce fichier dans le répertoire
+<code class="docutils literal notranslate"><span class="pre">/usr/local/tomcat/webapps</span></code> du conteneur afin de déployer l’application
+dans le conteneur.</p>
+</div>
+</div>
+<div class="section" id="creer-une-image">
+<h2>Créer une image<a class="headerlink" href="#creer-une-image" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code> permet de créer une image. Cette commande s’attend
+à trouver un fichier nommé <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> dans le répertoire indiqué. Ce fichier
+est un fichier texte qui décrit l’image et les opérations à réaliser pour la créer.</p>
+<p>Le principe d’une image est qu’elle est conçue comme une succession de couches
+(<em>layers</em>) qui correspondent à des opérations à effectuer lors de sa création.
+Ainsi, une image est généralement basée sur une autre image en ajoutant une ou
+plusieurs couches de modifications. Par exemple, pour créer une image d’une application
+Web Java, nous pouvons partir d’une image d’un serveur Tomcat dans lequel nous
+ajoutons les fichiers nécessaires au déploiement. Pour cela, nous allons créer
+le fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> de l’image :</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Dockerfile pour une application Web Java</span><a class="headerlink" href="#id2" title="Lien permanent vers ce code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FROM tomcat:9.0-jre8-alpine
+
+COPY target/monapp*.war $CATALINA_HOME/webapps/monapp.war
+</pre></div>
+</div>
+</div>
+<p>La première ligne du fichier indique que l’image doit être construite à partir
+de l’image <code class="docutils literal notranslate"><span class="pre">tomcat:9.0-jre8-alpine</span></code>. La ligne suivante est une commande qui
+va créer une nouvelle couche : il s’agit de copier un fichier du répertoire
+<code class="file docutils literal notranslate"><span class="pre">target</span></code> de la machine hôte dans le répertoire <code class="file docutils literal notranslate"><span class="pre">$CATALINA_HOME/webapps</span></code> de l’image
+avec le nom <code class="file docutils literal notranslate"><span class="pre">monapp.war</span></code>. Ainsi, si le fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> est placé
+à la racine d’un projet Maven qui produit un fichier WAR, il est très facile de créer
+une image après le packaging de l’application :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ mvn clean package
+$ docker image build -t local/monapp:latest .
+</pre></div>
+</div>
+<p>L’option <code class="docutils literal notranslate"><span class="pre">-t</span></code> permet d’indiquer le <em>repository</em> et le <em>tag</em> de l’image. Le <code class="docutils literal notranslate"><span class="pre">.</span></code>
+à la fin de la commande est important puisqu’on indique le répertoire qui contient
+le fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code>, c’est-à-dire le répertoire courant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">$CATALINA_HOME</span></code> est une variable d’environnement du conteneur.
+Chaque image peut spécifier dans son fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> une ou plusieurs variables
+d’environnement. Ainsi l’image <code class="docutils literal notranslate"><span class="pre">tomcat:9.0-jre8-alpine</span></code> définit cette variable
+pour désigner le répertoire d’installation de Catalina, le moteur HTTP de
+Tomcat. Cette variable peut être utilisée par un fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code>
+qui réutilise cette image, ce qui évite d’écrire explicitement le chemin.</p>
+</div>
+<p>Pour plus d’information sur le contenu du fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code>, vous
+pouvez vous reporter à la documentation officielle :</p>
+<blockquote>
+<div><p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></p>
+</div></blockquote>
+<p>Nous pouvons vérifier que l’image a bien été créée avec la commande :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image ls
+</pre></div>
+</div>
+<p>Puis nous pouvons créer un conteneur à partir de cette nouvelle image :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name monapp -d -p <span class="m">8080</span>:8080 local/monapp
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Exercice<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="exercice admonition">
-<p class="admonition-title">Configurer un job Jenkins</p>
-<p>Configurez un job Jenkins pour récupérer un projet depuis un dépôt Git
-distant, générer le package WAR du projet et déployer automatiquement
-cette archive Web Java dans Tomcat.</p>
+<p class="admonition-title">Créer l’image d’une application et un conteneur</p>
+<p>À partir d’un projet Maven générant une application Web Java, créez le
+fichier <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code> pour construire l’image complète de votre application.</p>
+<p>Créez l’image puis un conteneur à partir de cette image.</p>
+</div>
+</div>
+<div class="section" id="deploiement-d-une-image-sur-docker-hub">
+<h2>Déploiement d’une image sur Docker Hub<a class="headerlink" href="#deploiement-d-une-image-sur-docker-hub" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://hub.docker.com/">Docker Hub</a> est un site permettant d’héberger et de partager des images <a class="reference external" href="https://docker.com">Docker</a>.
+Si vous souhaitez créer vos propres images <a class="reference external" href="https://docker.com">Docker</a>, il suffit de créer un compte
+en ligne.</p>
+<div class="exercice admonition">
+<p class="admonition-title">Compte Docker Hub</p>
+<p>Créez un compte sur Docker Hub :</p>
+<blockquote>
+<div><p><a class="reference external" href="https://hub.docker.com/signup?next=%2F%3Fref%3Dlogin">https://hub.docker.com/signup?next=%2F%3Fref%3Dlogin</a></p>
+</div></blockquote>
+</div>
+<p>Pour pouvoir être déployée dans votre compte, une image avoir un nom de la forme :</p>
+<blockquote>
+<div><p>[LOGIN]/[NOM DEPOT]</p>
+</div></blockquote>
+<p>Vous pouvez créer un nouveau dépôt depuis le site Web. Ensuite, il faut vous connecter
+à votre compte depuis la ligne de commandes :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker login
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Prudence</p>
+<p>Si vous n’utilisez pas votre propre ordinateur, n’oubliez pas de vous
+déconnecter à la fin :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker <span class="nb">logout</span>
+</pre></div>
+</div>
+</div>
+<p>Ensuite vous devez disposer d’une image avec le même nom en local. Si ce n’est
+pas le cas, vous pouvez créer un nouveau <em>tag</em> à partir d’un tag existant :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image tag local/monapp:latest spoonless/monapp:latest
+</pre></div>
+</div>
+<p>Ensuite, vous pouvez envoyer votre image sur <a class="reference external" href="https://hub.docker.com/">Docker Hub</a> avec la commande
+<code class="docutils literal notranslate"><span class="pre">push</span></code> :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker image push spoonless/monapp:latest
+</pre></div>
+</div>
+<p>Cette image est maintenant disponible en ligne et il est possible de créer un
+conteneur depuis n’importe quelle machine qui a accès à ce dépôt :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name monapp -d -p <span class="m">8080</span>:8080 spoonless/monapp
+</pre></div>
 </div>
 </div>
 </div>
@@ -494,10 +799,8 @@ cette archive Web Java dans Tomcat.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="deploiement_heroku.html" class="btn btn-neutral float-right" title="Déploiement vers Heroku" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="deploiement_maven.html" class="btn btn-neutral float-left" title="Déploiement à partir de Maven" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
+        <a href="deploiement_heroku.html" class="btn btn-neutral float-left" title="Déploiement vers Heroku" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
       
     </div>
   
