@@ -188,9 +188,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../javaee_web/jdbc_webapp.html">JDBC dans une application Web</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-d-une-datasource">Déclaration d’une DataSource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#acces-a-une-datasource">Accès à une DataSource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#injection-d-une-datasource">Injection d’une DataSource</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-de-la-datasource-dans-le-fichier-web-xml">Déclaration de la DataSource dans le fichier web.xml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-d-une-datasource-dans-tomcat">Déclaration d’une DataSource dans Tomcat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../javaee_web/jaxrs.html">Les API Web avec JAX-RS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#la-notion-de-ressource">La notion de ressource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#configurer-une-application-web-pour-jax-rs">Configurer une application Web pour JAX-RS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#implementer-des-ressources-avec-jax-rs">Implémenter des ressources avec JAX-RS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javaee_web/jaxrs.html#les-annotations-de-methodes">Les annotations de méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javaee_web/jaxrs.html#parametre-dans-le-chemin-d-uri">Paramètre dans le chemin d’URI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#data-binding">Data binding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#generer-une-reponse">Générer une réponse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#gerer-des-exceptions">Gérer des exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#implementer-un-client-http">Implémenter un client HTTP</a></li>
 </ul>
 </li>
 </ul>
@@ -359,6 +374,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_docker.html#creer-une-image">Créer une image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_docker.html#id1">Exercice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_docker.html#deploiement-d-une-image-sur-docker-hub">Déploiement d’une image sur Docker Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deploiement/deploiement_docker.html#creation-d-une-chaine-de-compilation">Création d’une chaîne de compilation</a></li>
 </ul>
 </li>
 </ul>
@@ -663,7 +679,7 @@ facilement recréés. Un dépôt <a class="reference external" href="https://git
 un fichier, ce dernier est toujours présent dans des versions
 antérieures et donc il est toujours conservé quelque part dans le dépôt.
 Il est donc fortement conseillé de n’ajouter à un dépôt que les fichiers
-nécessaires. Vous pouvez créer un fichier <strong>``.gitignore``</strong> dans votre
+nécessaires. Vous pouvez créer un fichier <code class="file docutils literal notranslate"><span class="pre">.gitignore</span></code> dans votre
 répertoire de travail. Ce fichier permet de lister tous les
 fichiers/répertoires que <a class="reference external" href="https://git-scm.com">Git</a> doit totalement ignorer.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
@@ -721,9 +737,9 @@ que sur cette branche.</p>
 </pre></div>
 </div>
 <p>Pour rapatrier tous les commits d’une branche vers la branche qui a servi de
-point de départ :</p>
+point de départ, on utilise la commande <code class="docutils literal notranslate"><span class="pre">merge</span></code> :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git checkout &lt;nom de la branche origine&gt;
-git branch &lt;nom de la branche à rapatrier&gt;
+git merge &lt;nom de la branche à rapatrier&gt;
 </pre></div>
 </div>
 <p>Pour détruire une branche :</p>
@@ -769,7 +785,7 @@ Cela permet de ne pas avoir de conflit directement sur la branche principale.
 Une fois les conflits résolus (s’il y en a), il suffit de rapatrier les commits
 de la branche sur la branche principale grâce à la commande <code class="docutils literal notranslate"><span class="pre">merge</span></code>.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git checkout master
-git merge &lt;nom de la branche&gt;
+git merge mabranche
 git push
 </pre></div>
 </div>
@@ -784,7 +800,22 @@ git push
 </pre></div>
 </div>
 <p>Le <code class="docutils literal notranslate"><span class="pre">rebase</span></code> interactif permet de revoir l’intégralité des commits. Il est
-possible de réordonner, de fusionner et même d’enlever des commits.</p>
+possible de réordonner, de fusionner et même de supprimer des commits.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si vous effectuez un <em>rebase</em> sur une branche qui déjà été poussée sur
+un dépôt distant, <a class="reference external" href="https://git-scm.com">Git</a> vous interdira de pousser à nouveau vos modifications
+sur le dépôt distant. En effet, lors d’une opération de <em>rebase</em>, <a class="reference external" href="https://git-scm.com">Git</a> tente
+de réappliquer vos modifications en générant de nouveaux commits. Donc, après
+une opération de <em>rebase</em>, la branche a été recréée à partir de la nouvelle
+base est diffère complètement de l’ancienne version de la branche. Pour
+pousser votre nouvelle version de la branche, vous devez utiliser l’option
+<code class="docutils literal notranslate"><span class="pre">-f</span></code> pour forcer le serveur distant à accepter vos nouveaux commits en
+remplacement des anciens :</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git push -f
+</pre></div>
+</div>
 </div>
 </div>
 </div>

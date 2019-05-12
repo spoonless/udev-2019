@@ -184,9 +184,24 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../javaee_web/jdbc_webapp.html">JDBC dans une application Web</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-d-une-datasource">Déclaration d’une DataSource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#acces-a-une-datasource">Accès à une DataSource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#injection-d-une-datasource">Injection d’une DataSource</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-de-la-datasource-dans-le-fichier-web-xml">Déclaration de la DataSource dans le fichier web.xml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../javaee_web/jdbc_webapp.html#declaration-d-une-datasource-dans-tomcat">Déclaration d’une DataSource dans Tomcat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../javaee_web/jaxrs.html">Les API Web avec JAX-RS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#la-notion-de-ressource">La notion de ressource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#configurer-une-application-web-pour-jax-rs">Configurer une application Web pour JAX-RS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#implementer-des-ressources-avec-jax-rs">Implémenter des ressources avec JAX-RS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javaee_web/jaxrs.html#les-annotations-de-methodes">Les annotations de méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javaee_web/jaxrs.html#parametre-dans-le-chemin-d-uri">Paramètre dans le chemin d’URI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#data-binding">Data binding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#generer-une-reponse">Générer une réponse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#gerer-des-exceptions">Gérer des exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../javaee_web/jaxrs.html#implementer-un-client-http">Implémenter un client HTTP</a></li>
 </ul>
 </li>
 </ul>
@@ -355,6 +370,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#creer-une-image">Créer une image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Exercice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deploiement-d-une-image-sur-docker-hub">Déploiement d’une image sur Docker Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creation-d-une-chaine-de-compilation">Création d’une chaîne de compilation</a></li>
 </ul>
 </li>
 </ul>
@@ -787,6 +803,30 @@ pas le cas, vous pouvez créer un nouveau <em>tag</em> à partir d’un tag exis
 conteneur depuis n’importe quelle machine qui a accès à ce dépôt :</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ docker container run --name monapp -d -p <span class="m">8080</span>:8080 spoonless/monapp
 </pre></div>
+</div>
+</div>
+<div class="section" id="creation-d-une-chaine-de-compilation">
+<h2>Création d’une chaîne de compilation<a class="headerlink" href="#creation-d-une-chaine-de-compilation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avec un <code class="file docutils literal notranslate"><span class="pre">Dockerfile</span></code>, il est possible de créer une image intermédiaire.
+Cela s’avère très pratique pour construire une chaîne de compilation (<em>toolchain</em>).
+L’image intermédiaire est utilisée pour créer un conteneur. Ce dernier produit
+la solution compilée qui est ensuite copiée dans l’image finale.</p>
+<p>Ainsi, pour un projet Java, on peut construire une première image basée sur
+une image Maven pour y placer les sources du projet et lancer le packaging.
+Le package ainsi produit est copié dans une seconde image qui correspond à l’image
+finale.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Dockerfile pour une chaîne de compilation</span><a class="headerlink" href="#id3" title="Lien permanent vers ce code">¶</a></div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FROM maven:3.6.1-jdk-8-alpine AS MAVEN_TOOL_CHAIN
+COPY pom.xml /tmp/
+COPY src /tmp/src/
+WORKDIR /tmp/
+RUN mvn package
+
+FROM tomcat:9.0-jre8-alpine
+COPY --from=MAVEN_TOOL_CHAIN /tmp/target/monapp*.war $CATALINA_HOME/webapps/monapp.war
+</pre></div>
+</div>
 </div>
 </div>
 </div>
