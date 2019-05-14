@@ -489,21 +489,31 @@ commande, il faut insérer dans la table commande un ligne par produit avec
 le numéro de la commande.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Le script de création de base de données</span><a class="headerlink" href="#id1" title="Lien permanent vers ce code">¶</a></div>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">drop</span> <span class="k">table</span> <span class="k">if</span> <span class="k">exists</span> <span class="n">commande</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">drop</span> <span class="k">table</span> <span class="k">if</span> <span class="k">exists</span> <span class="n">ligne_commande</span><span class="p">;</span>
+<span class="k">drop</span> <span class="k">table</span> <span class="k">if</span> <span class="k">exists</span> <span class="n">commande</span><span class="p">;</span>
 <span class="k">drop</span> <span class="k">table</span> <span class="k">if</span> <span class="k">exists</span> <span class="n">produit</span><span class="p">;</span>
 
 <span class="k">create</span> <span class="k">table</span> <span class="n">produit</span> <span class="p">(</span>
   <span class="n">id</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span><span class="p">,</span>
+  <span class="n">code</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
   <span class="n">libelle</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
   <span class="n">prix</span> <span class="n">double</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
   <span class="k">primary</span> <span class="k">key</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
 
+<span class="k">insert</span> <span class="k">into</span> <span class="n">produit</span> <span class="k">values</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;XTV12&#39;</span><span class="p">,</span> <span class="s1">&#39;Pomme&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">12</span><span class="p">);</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">produit</span> <span class="k">values</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;WTV99&#39;</span><span class="p">,</span> <span class="s1">&#39;Poire&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">.</span><span class="mi">30</span><span class="p">);</span>
+
 <span class="k">create</span> <span class="k">table</span> <span class="n">commande</span><span class="p">(</span>
   <span class="n">id</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span><span class="p">,</span>
+  <span class="n">date_creation</span> <span class="nb">date</span> <span class="k">default</span> <span class="n">NOW</span><span class="p">(),</span>
+  <span class="k">primary</span> <span class="k">key</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">create</span> <span class="k">table</span> <span class="n">ligne_commande</span><span class="p">(</span>
+  <span class="n">commande_id</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
   <span class="n">produit_id</span> <span class="nb">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
-  <span class="n">numero</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
-  <span class="k">primary</span> <span class="k">key</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+  <span class="k">foreign</span> <span class="k">key</span> <span class="n">commande_fk</span><span class="p">(</span><span class="n">commande_id</span><span class="p">)</span> <span class="k">references</span> <span class="n">commande</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
   <span class="k">foreign</span> <span class="k">key</span> <span class="n">produit_fk</span><span class="p">(</span><span class="n">produit_id</span><span class="p">)</span> <span class="k">references</span> <span class="n">produit</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
 </pre></div>
